@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="description" content="Hemanth Reddy Yerrapu Reddy - AI/ML Enthusiast, Full-Stack Developer, IBM Medal Winner. Specialized in Computer Vision, Machine Learning, and Modern Web Development.">
+    <meta name="keywords" content="AI/ML, Computer Vision, Full-Stack Developer, Machine Learning, OpenCV, MediaPipe, React, Python, Portfolio">
+    <meta name="author" content="Hemanth Reddy Yerrapu Reddy">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hemanthreddyy98-hub.github.io/portfolio/">
+    <meta property="og:title" content="Hemanth Reddy Yerrapu Reddy - AI/ML Portfolio">
+    <meta property="og:description" content="AI/ML Enthusiast, Full-Stack Developer, IBM Medal Winner. Specialized in Computer Vision and Machine Learning.">
+    <meta property="og:image" content="https://hemanthreddyy98-hub.github.io/portfolio/assets/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://hemanthreddyy98-hub.github.io/portfolio/">
+    <meta property="twitter:title" content="Hemanth Reddy Yerrapu Reddy - AI/ML Portfolio">
+    <meta property="twitter:description" content="AI/ML Enthusiast, Full-Stack Developer, IBM Medal Winner. Specialized in Computer Vision and Machine Learning.">
+    <meta property="twitter:image" content="https://hemanthreddyy98-hub.github.io/portfolio/assets/og-image.jpg">
+
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#1e40af">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="HR Portfolio">
+    <link rel="apple-touch-icon" href="assets/icons/icon-192x192.png">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+    
+    <!-- DNS Prefetch for External Resources -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="//unpkg.com">
+    
+    <title>Hemanth Reddy Yerrapu Reddy - AI/ML Portfolio</title>
+    
+    <!-- Award-Winning Portfolio Styles -->
+    <link rel="stylesheet" href="styles.css?v=4.0">
+    <link rel="stylesheet" href="modern-styles.css?v=4.0">
+    <link rel="stylesheet" href="universe-graphics.css?v=4.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Hemanth Reddy Yerrapu Reddy",
+        "jobTitle": "AI/ML Enthusiast & Full-Stack Developer",
+        "description": "Specialized in Computer Vision, Machine Learning, and Full-Stack Development",
+        "url": "https://hemanthreddyy98-hub.github.io/portfolio/",
+        "sameAs": [
+            "https://github.com/hemanthreddyy98-hub",
+            "https://linkedin.com/in/hemanthreddyy98"
+        ],
+        "knowsAbout": [
+            "Artificial Intelligence",
+            "Machine Learning",
+            "Computer Vision",
+            "Full-Stack Development",
+            "Python",
+            "React.js",
+            "OpenCV",
+            "MediaPipe"
+        ],
+        "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "Kalasalingam Academy of Research and Education"
+        },
+        "award": "IBM Medal Winner"
+    }
+    </script>
+</head>
+<body>
+    <!-- Web Components for Reusable UI Elements -->
+    <template id="loading-spinner">
+        <div class="loading-spinner" role="status" aria-label="Loading">
+            <div class="spinner-ring"></div>
+            <div class="spinner-ring"></div>
+            <div class="spinner-ring"></div>
+        </div>
+    </template>
+
+    <template id="notification-toast">
+        <div class="notification-toast" role="alert" aria-live="polite">
+            <div class="toast-content">
+                <i class="toast-icon"></i>
+                <span class="toast-message"></span>
+            </div>
+            <button class="toast-close" aria-label="Close notification">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </template>
+
+    <!-- 🌌 COSMIC PARTICLE SYSTEM - UNIVERSE LEVEL -->
+    <div class="cosmic-particle-system" aria-hidden="true">
+        <div class="cosmic-particle" style="top: 5%; left: 10%;"></div>
+        <div class="cosmic-particle" style="top: 15%; left: 85%;"></div>
+        <div class="cosmic-particle" style="top: 25%; left: 20%;"></div>
+        <div class="cosmic-particle" style="top: 35%; left: 90%;"></div>
+        <div class="cosmic-particle" style="top: 45%; left: 5%;"></div>
+        <div class="cosmic-particle" style="top: 55%; left: 80%;"></div>
+        <div class="cosmic-particle" style="top: 65%; left: 15%;"></div>
+        <div class="cosmic-particle" style="top: 75%; left: 70%;"></div>
+        <div class="cosmic-particle" style="top: 85%; left: 30%;"></div>
+        <div class="cosmic-particle" style="top: 95%; left: 60%;"></div>
+        <div class="cosmic-particle" style="top: 10%; left: 50%;"></div>
+        <div class="cosmic-particle" style="top: 20%; left: 25%;"></div>
+        <div class="cosmic-particle" style="top: 30%; left: 75%;"></div>
+        <div class="cosmic-particle" style="top: 40%; left: 40%;"></div>
+        <div class="cosmic-particle" style="top: 50%; left: 95%;"></div>
+        <div class="cosmic-particle" style="top: 60%; left: 35%;"></div>
+        <div class="cosmic-particle" style="top: 70%; left: 65%;"></div>
+        <div class="cosmic-particle" style="top: 80%; left: 45%;"></div>
+        <div class="cosmic-particle" style="top: 90%; left: 55%;"></div>
+        <div class="cosmic-particle" style="top: 8%; left: 80%;"></div>
+        <div class="cosmic-particle" style="top: 18%; left: 12%;"></div>
+        <div class="cosmic-particle" style="top: 28%; left: 88%;"></div>
+        <div class="cosmic-particle" style="top: 38%; left: 22%;"></div>
+        <div class="cosmic-particle" style="top: 48%; left: 78%;"></div>
+        <div class="cosmic-particle" style="top: 58%; left: 8%;"></div>
+        <div class="cosmic-particle" style="top: 68%; left: 92%;"></div>
+        <div class="cosmic-particle" style="top: 78%; left: 18%;"></div>
+        <div class="cosmic-particle" style="top: 88%; left: 72%;"></div>
+        <div class="cosmic-particle" style="top: 98%; left: 42%;"></div>
+    </div>
+
+    <!-- Enhanced Floating Background Shapes with CSS Grid -->
+    <div class="floating-shapes" aria-hidden="true">
+        <div class="floating-shape" data-shape="1"></div>
+        <div class="floating-shape" data-shape="2"></div>
+        <div class="floating-shape" data-shape="3"></div>
+        <div class="floating-shape" data-shape="4"></div>
+        <div class="floating-shape" data-shape="5"></div>
+        <div class="floating-shape" data-shape="6"></div>
+        <div class="floating-shape" data-shape="7"></div>
+        <div class="floating-shape" data-shape="8"></div>
+        <div class="floating-shape" data-shape="9"></div>
+        <div class="floating-shape" data-shape="10"></div>
+        <!-- Enhanced shapes with modern CSS -->
+        <div class="floating-shape enhanced" data-shape="11"></div>
+        <div class="floating-shape enhanced" data-shape="12"></div>
+        <div class="floating-shape enhanced" data-shape="13"></div>
+        <div class="floating-shape enhanced" data-shape="14"></div>
+        <div class="floating-shape enhanced" data-shape="15"></div>
+    </div>
+
+    <!-- Modern Canvas with WebGL Support -->
+    <canvas id="particleCanvas" class="particle-canvas" aria-hidden="true"></canvas>
+
+    <!-- Interactive Grid Background with CSS Grid -->
+    <div class="interactive-grid" aria-hidden="true"></div>
+
+    <!-- Enhanced Navigation with Modern Accessibility -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text" aria-label="HR Portfolio">HR</span>
+                <div class="logo-glow" aria-hidden="true"></div>
+            </div>
+            <ul class="nav-menu" role="menubar">
+                <li class="nav-item" role="none">
+                    <a href="#home" class="nav-link" role="menuitem" aria-current="page">
+                        <i class="fas fa-home" aria-hidden="true"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="#about" class="nav-link" role="menuitem">
+                        <i class="fas fa-user" aria-hidden="true"></i>
+                        <span>About</span>
+                    </a>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="#skills" class="nav-link" role="menuitem">
+                        <i class="fas fa-code" aria-hidden="true"></i>
+                        <span>Skills</span>
+                    </a>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="#projects" class="nav-link" role="menuitem">
+                        <i class="fas fa-project-diagram" aria-hidden="true"></i>
+                        <span>Projects</span>
+                    </a>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="#certifications" class="nav-link" role="menuitem">
+                        <i class="fas fa-certificate" aria-hidden="true"></i>
+                        <span>Certifications</span>
+                    </a>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="#experience" class="nav-link" role="menuitem">
+                        <i class="fas fa-briefcase" aria-hidden="true"></i>
+                        <span>Experience</span>
+                    </a>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="#contact" class="nav-link" role="menuitem">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        <span>Contact</span>
+                    </a>
+                </li>
+            </ul>
+            <button class="droplet-toggle" id="themeDroplet" aria-label="Toggle theme">
+                <i class="fa-solid fa-droplet droplet-icon"></i>
+            </button>
+            <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+    <!-- 🌌 COSMIC HERO SECTION - UNIVERSE LEVEL -->
+    <section id="home" class="hero cosmic-background holographic-glass" role="banner">
+        <!-- Advanced background elements with CSS Grid -->
+        <div class="hero-bg-elements" aria-hidden="true">
+            <div class="bg-circle bg-circle-1"></div>
+            <div class="bg-circle bg-circle-2"></div>
+            <div class="bg-circle bg-circle-3"></div>
+            <div class="bg-circle bg-circle-4"></div>
+        </div>
+        
+        <div class="hero-container">
+            <div class="hero-content scroll-reveal fade-in" data-aos="fade-up">
+                <div class="hero-badge" role="status" aria-label="AI/ML Enthusiast">
+                    <i class="fas fa-star" aria-hidden="true"></i>
+                    <span>AI/ML Enthusiast</span>
+                </div>
+                <h1 class="hero-title">
+                    Hello, I'm Hemanth Reddy Yerrapu Reddy
+                </h1>
+                <div class="marquee" aria-label="Headline">
+                    <div class="marquee-track">
+                        <span class="marquee-text">B.Tech Graduate | AI/ML Enthusiast | IBM Medal Winner | Full-Stack Developer</span>
+                        <span class="marquee-text" aria-hidden="true">B.Tech Graduate | AI/ML Enthusiast | IBM Medal Winner | Full-Stack Developer</span>
+                        <span class="marquee-text" aria-hidden="true">B.Tech Graduate | AI/ML Enthusiast | IBM Medal Winner | Full-Stack Developer</span>
+                    </div>
+                </div>
+                <div class="hero-tabs">
+                    <div class="tab-buttons" role="tablist">
+                        <button class="tab-button active" role="tab" aria-selected="true" data-panel="tab-overview">Overview</button>
+                        <button class="tab-button" role="tab" aria-selected="false" data-panel="tab-details">Details</button>
+                    </div>
+                    <div class="tab-panels">
+                        <div id="tab-overview" class="tab-panel active" role="tabpanel">
+                            <p class="hero-description">
+                                Passionate about building real-world solutions through code.
+                                Specialized in Computer Vision, Machine Learning, and Full-Stack Development.
+                            </p>
+                            <div class="hero-buttons">
+                                <a href="#projects" class="btn btn-primary cosmic-button interactive-element" role="button">
+                                    <i class="fas fa-rocket" aria-hidden="true"></i>
+                                    View My Work
+                                    <div class="btn-glow"></div>
+                                </a>
+                                <a href="#contact" class="btn btn-secondary cosmic-button interactive-element" role="button">
+                                    <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                                    Get In Touch
+                                    <div class="btn-glow"></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div id="tab-details" class="tab-panel" role="tabpanel">
+                            <p class="hero-description">
+                                B.Tech Graduate focused on AI/ML and modern web. IBM Medal Winner, experienced with
+                                OpenCV, MediaPipe, React, and backend APIs.
+                            </p>
+                            <div class="hero-stats" role="region" aria-label="Achievement Statistics">
+                                <div class="stat">
+                                    <div class="stat-icon" aria-hidden="true">
+                                        <i class="fas fa-trophy"></i>
+                                    </div>
+                                    <span class="stat-number">8+</span>
+                                    <span class="stat-label">NPTEL Certifications</span>
+                                </div>
+                                <div class="stat">
+                                    <div class="stat-icon" aria-hidden="true">
+                                        <i class="fas fa-code"></i>
+                                    </div>
+                                    <span class="stat-number">5000+</span>
+                                    <span class="stat-label">Problems Solved</span>
+                                </div>
+                                <div class="stat">
+                                    <div class="stat-icon" aria-hidden="true">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <span class="stat-number">3+</span>
+                                    <span class="stat-label">Years Experience</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="hero-description">
+                    Passionate about building real-world solutions through code. 
+                    Specialized in Computer Vision, Machine Learning, and Full-Stack Development.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary cosmic-button interactive-element" role="button">
+                        <i class="fas fa-rocket" aria-hidden="true"></i>
+                        View My Work
+                        <div class="btn-glow"></div>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary cosmic-button interactive-element" role="button">
+                        <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                        Get In Touch
+                        <div class="btn-glow"></div>
+                    </a>
+                </div>
+                <div class="hero-stats" role="region" aria-label="Achievement Statistics">
+                    <div class="stat">
+                        <div class="stat-icon" aria-hidden="true">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <span class="stat-number" aria-label="8 plus NPTEL Certifications">8+</span>
+                        <span class="stat-label">NPTEL Certifications</span>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-icon" aria-hidden="true">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <span class="stat-number" aria-label="5000 plus Problems Solved">5000+</span>
+                        <span class="stat-label">Problems Solved</span>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-icon" aria-hidden="true">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <span class="stat-number" aria-label="3 plus Years Experience">3+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image scroll-reveal slide-in-right" data-aos="fade-left">
+                <div class="profile-card">
+                    <div class="profile-image" aria-hidden="true">
+                        <div class="profile-photo-placeholder">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <div class="profile-ring"></div>
+                        <div class="profile-particles"></div>
+                    </div>
+                    <div class="achievement-badge" role="status" aria-label="IBM Medal Winner">
+                        <i class="fas fa-medal" aria-hidden="true"></i>
+                        <span>IBM Medal Winner</span>
+                        <div class="badge-glow"></div>
+                    </div>
+                    <div class="profile-stats" role="region" aria-label="Profile Statistics">
+                        <div class="mini-stat">
+                            <span class="mini-stat-number">95%</span>
+                            <span class="mini-stat-label">Accuracy</span>
+                        </div>
+                        <div class="mini-stat">
+                            <span class="mini-stat-number">24/7</span>
+                            <span class="mini-stat-label">Available</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <span>About Me</span>
+                <div class="title-decoration">
+                    <div class="title-line"></div>
+                    <div class="title-dot"></div>
+                    <div class="title-line"></div>
+                </div>
+            </h2>
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <div class="about-intro">
+                        <div class="intro-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <p class="about-paragraph">
+                            I'm a recent B.Tech graduate from <strong>Kalasalingam Academy of Research and Education</strong>, 
+                            specializing in Computer Science with AI & ML. My journey in technology has been driven by a 
+                            passion for innovation and problem-solving.
+                        </p>
+                    </div>
+                    
+                    <div class="about-achievement">
+                        <div class="achievement-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <p class="about-paragraph">
+                            One of my proudest achievements was winning the <strong>IBM Medal</strong> at a university-level event, 
+                            recognizing my performance and innovation in a competitive environment. This experience 
+                            reinforced my belief in the power of dedication and technical excellence.
+                        </p>
+                    </div>
+                    
+                    <p class="about-paragraph">
+                        I'm known for being serious and steady in high-pressure situations, dedicating my weekends 
+                        to working on long-term tech goals. When I'm not coding, you'll find me playing badminton, 
+                        which keeps my mind sharp and body active.
+                    </p>
+                    
+                    <p class="about-paragraph">
+                        Beyond academics, I completed an <strong>AICTE Internship</strong> gaining hands-on exposure to
+                        practical project development. I also worked as a <strong>Freelance Contributor</strong> with
+                        <strong>Outlier</strong> and <strong>Deccan AI</strong> (San Francisco–based), sharpening my
+                        communication and problem-solving skills in real-world environments. I've completed
+                        certifications in <strong>AI in Marketing</strong> and a <strong>Korean language</strong> course,
+                        reflecting both my technical depth and cultural curiosity.
+                    </p>
+                    
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <span>B.Tech in Computer Science (AI & ML)</span>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <span>Kalasalingam Academy of Research and Education</span>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-calendar"></i>
+                            </div>
+                            <span>Graduated 2025</span>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <span>Open to Relocation</span>
+                        </div>
+                    </div>
+
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-medal"></i>
+                            </div>
+                            <span>IBM Medal Winner</span>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <span>AICTE Internship</span>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <span>Freelance: Outlier, Deccan AI</span>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <span>AI in Marketing, Korean Language</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image" data-aos="fade-left">
+                    <div class="education-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot">
+                                <div class="dot-pulse"></div>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <h4>M.Tech Computer Science & Engineering</h4>
+                                    <div class="timeline-badge current">Ongoing</div>
+                                </div>
+                                <p>Viswam Engineering College</p>
+                                <span class="year">2025 - Present</span>
+                                <span class="percentage">Specialization: Software Engineering</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">
+                                <div class="dot-pulse"></div>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <h4>B.Tech Computer Science (AI & ML)</h4>
+                                    <div class="timeline-badge">Completed</div>
+                                </div>
+                                <p>Kalasalingam Academy of Research and Education</p>
+                                <span class="year">2025</span>
+                                <span class="percentage">CGPA: 7.66</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">
+                                <div class="dot-pulse"></div>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <h4>Intermediate</h4>
+                                    <div class="timeline-badge">Completed</div>
+                                </div>
+                                <p>Sri Chaitanya Junior College</p>
+                                <span class="year">2020</span>
+                                <span class="percentage">CGPA: 9.0</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">
+                                <div class="dot-pulse"></div>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <h4>10th Standard</h4>
+                                    <div class="timeline-badge">Completed</div>
+                                </div>
+                                <p>Sri Chaitanya High School</p>
+                                <span class="year">2018</span>
+                                <span class="percentage">CGPA: 9.7</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <span>Technical Skills</span>
+                <div class="title-decoration">
+                    <div class="title-line"></div>
+                    <div class="title-dot"></div>
+                    <div class="title-line"></div>
+                </div>
+            </h2>
+            <div class="skills-filter" data-aos="fade-up" data-aos-delay="100">
+                <button class="skills-filter-button active" data-panel="skills-programming">Programming Languages</button>
+                <button class="skills-filter-button" data-panel="skills-frontend">Frontend Technologies</button>
+                <button class="skills-filter-button" data-panel="skills-backend">Backend & Databases</button>
+                <button class="skills-filter-button" data-panel="skills-aiml">AI & Machine Learning</button>
+            </div>
+            <div class="skills-panels">
+                <div id="skills-programming" class="skills-panel active" data-aos="fade-up" data-aos-delay="120">
+                    <div class="skills-gallery">
+                        <div class="skill-tile"><i class="fab fa-java skill-icon"></i><span class="skill-label">Java</span></div>
+                        <div class="skill-tile"><i class="fab fa-python skill-icon"></i><span class="skill-label">Python</span></div>
+                        <div class="skill-tile"><i class="fas fa-database skill-icon"></i><span class="skill-label">SQL</span></div>
+                        <div class="skill-tile"><i class="fab fa-git-alt skill-icon"></i><span class="skill-label">Git</span></div>
+                    </div>
+                </div>
+                <div id="skills-frontend" class="skills-panel" data-aos="fade-up" data-aos-delay="140">
+                    <div class="skills-gallery">
+                        <div class="skill-tile"><i class="fab fa-html5 skill-icon"></i><span class="skill-label">HTML5 & CSS3</span></div>
+                        <div class="skill-tile"><i class="fab fa-js-square skill-icon"></i><span class="skill-label">JavaScript</span></div>
+                        <div class="skill-tile"><i class="fab fa-react skill-icon"></i><span class="skill-label">React.js</span></div>
+                        <div class="skill-tile"><i class="fab fa-bootstrap skill-icon"></i><span class="skill-label">Bootstrap</span></div>
+                    </div>
+                </div>
+                <div id="skills-backend" class="skills-panel" data-aos="fade-up" data-aos-delay="160">
+                    <div class="skills-gallery">
+                        <div class="skill-tile"><i class="fas fa-leaf skill-icon"></i><span class="skill-label">Spring Framework</span></div>
+                        <div class="skill-tile"><i class="fas fa-database skill-icon"></i><span class="skill-label">MySQL</span></div>
+                        <div class="skill-tile"><i class="fas fa-database skill-icon"></i><span class="skill-label">MongoDB</span></div>
+                        <div class="skill-tile"><i class="fas fa-server skill-icon"></i><span class="skill-label">REST APIs</span></div>
+                    </div>
+                </div>
+                <div id="skills-aiml" class="skills-panel" data-aos="fade-up" data-aos-delay="180">
+                    <div class="skills-gallery">
+                        <div class="skill-tile"><i class="fas fa-eye skill-icon"></i><span class="skill-label">OpenCV</span></div>
+                        <div class="skill-tile"><i class="fas fa-hand-paper skill-icon"></i><span class="skill-label">MediaPipe</span></div>
+                        <div class="skill-tile"><i class="fas fa-brain skill-icon"></i><span class="skill-label">Machine Learning</span></div>
+                        <div class="skill-tile"><i class="fas fa-robot skill-icon"></i><span class="skill-label">AI/ML</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <span>Featured Projects</span>
+                <div class="title-decoration">
+                    <div class="title-line"></div>
+                    <div class="title-dot"></div>
+                    <div class="title-line"></div>
+                </div>
+            </h2>
+            <div class="projects-grid">
+                <div class="project-card ai-ml quantum-card holographic-glass card-3d card-tilt interactive-element" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-header">
+                        <div class="project-image">
+                            <i class="fas fa-dumbbell"></i>
+                            <div class="project-overlay">
+                                <div class="overlay-content">
+                                    <i class="fas fa-play"></i>
+                                    <span>View Demo</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-badge">AI/ML</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">PoseTrack: Real-Time Pose Estimation</h3>
+                        <p class="project-description">
+                            Developed GymPose AI - a cutting-edge fitness application using AI-powered computer vision 
+                            with OpenCV and MediaPipe. Features real-time pose detection, form analysis, rep counting, 
+                            and personalized coaching feedback for gym exercises including squats, deadlifts, and lunges.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">MediaPipe</span>
+                            <span class="tech-tag">Computer Vision</span>
+                            <span class="tech-tag">AI/ML</span>
+                            <span class="tech-tag">Fitness Tech</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://hemanthreddyy98-hub.github.io/hemanthreddyy98-hub-hemanthreddyy98-hub-Real-Time-Pose-Estimation-Frontend/" class="project-link" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                            <a href="https://github.com/hemanthreddyy98-hub/PoseTrack-Real-Time-Pose-Estimation" class="project-link" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i>
+                                Source Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-glow"></div>
+                </div>
+
+                <div class="project-card portfolio quantum-card holographic-glass card-3d card-rotate interactive-element" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-header">
+                        <div class="project-image">
+                            <i class="fas fa-id-badge"></i>
+                            <div class="project-overlay">
+                                <div class="overlay-content">
+                                    <i class="fas fa-play"></i>
+                                    <span>View Demo</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-badge">Web Dev</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Personal Portfolio Website</h3>
+                        <p class="project-description">
+                            A modern, responsive, and highly animated personal portfolio showcasing skills, projects,
+                            certifications, and experience with vibrant backgrounds, glassmorphism, and AOS scroll animations.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">AOS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://hemanthreddyy98-hub.github.io/Hemanth-Portfolio/" class="project-link" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                            <a href="https://github.com/hemanthreddyy98-hub/Hemanth-Portfolio" class="project-link" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i>
+                                Source Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-glow"></div>
+                </div>
+
+                <!-- Explore more projects card -->
+                <div class="project-card quantum-card holographic-glass card-3d card-depth interactive-element" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-content" style="text-align: center;">
+                        <h3 class="project-title">Explore More Projects</h3>
+                        <p class="project-description">See more repositories, tools, and apps on GitHub.</p>
+                        <div class="project-links" style="justify-content: center;">
+                            <a href="https://github.com/hemanthreddyy98-hub?tab=repositories" class="project-link" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i>
+                                Explore More Projects
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <span>Certifications & Achievements</span>
+                <div class="title-decoration">
+                    <div class="title-line"></div>
+                    <div class="title-dot"></div>
+                    <div class="title-line"></div>
+                </div>
+            </h2>
+            <div class="certifications-grid">
+                <div class="cert-card elite holographic-glass quantum-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="cert-header">
+                        <div class="cert-badge-container">
+                            <span class="cert-badge elite">Elite</span>
+                            <div class="badge-sparkle"></div>
+                        </div>
+                        <h3>Frontend Developer (React)</h3>
+                    </div>
+                    <p class="cert-issuer">HackerRank</p>
+                    <div class="cert-score">
+                        <span class="score">Certified</span>
+                        <span class="score-label">Role Certification</span>
+                        <div class="score-glow"></div>
+                    </div>
+                    <div class="cert-details">
+                        <span class="detail">Earned on 24 Aug 2025</span>
+                        <span class="detail">Certificate ID: 690FD5161A2A</span>
+                    </div>
+                    <div class="cert-glow"></div>
+                </div>
+
+                <div class="cert-card elite holographic-glass quantum-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="cert-header">
+                        <div class="cert-badge-container">
+                            <span class="cert-badge elite">Elite</span>
+                            <div class="badge-sparkle"></div>
+                        </div>
+                        <h3>Software Engineer Intern</h3>
+                    </div>
+                    <p class="cert-issuer">HackerRank</p>
+                    <div class="cert-score">
+                        <span class="score">Certified</span>
+                        <span class="score-label">Role Certification</span>
+                        <div class="score-glow"></div>
+                    </div>
+                    <div class="cert-details">
+                        <span class="detail">Earned on 24 Aug 2025</span>
+                        <span class="detail">Certificate ID: 19E5D300803D</span>
+                    </div>
+                    <div class="cert-glow"></div>
+                </div>
+
+                <div class="cert-card elite holographic-glass quantum-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="cert-header">
+                        <div class="cert-badge-container">
+                            <span class="cert-badge elite">Elite</span>
+                            <div class="badge-sparkle"></div>
+                        </div>
+                        <h3>Industry 4.0 & IIoT</h3>
+                    </div>
+                    <p class="cert-issuer">NPTEL - IIT Kharagpur</p>
+                    <div class="cert-score">
+                        <span class="score">97%</span>
+                        <span class="score-label">Consolidated Score</span>
+                        <div class="score-glow"></div>
+                    </div>
+                    <div class="cert-details">
+                        <span class="detail">Top 1%</span>
+                        <span class="detail">13,763 Candidates</span>
+                    </div>
+                    <div class="cert-glow"></div>
+                </div>
+
+                <div class="cert-card elite holographic-glass quantum-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="cert-header">
+                        <div class="cert-badge-container">
+                            <span class="cert-badge elite">Elite</span>
+                            <div class="badge-sparkle"></div>
+                        </div>
+                        <h3>AI in Marketing</h3>
+                    </div>
+                    <p class="cert-issuer">NPTEL - IIT Roorkee</p>
+                    <div class="cert-score">
+                        <span class="score">83%</span>
+                        <span class="score-label">Consolidated Score</span>
+                        <div class="score-glow"></div>
+                    </div>
+                    <div class="cert-details">
+                        <span class="detail">Top 1%</span>
+                        <span class="detail">2,975 Candidates</span>
+                    </div>
+                    <div class="cert-glow"></div>
+                </div>
+
+                <div class="cert-card elite holographic-glass quantum-card" data-aos="fade-up" data-aos-delay="350">
+                    <div class="cert-header">
+                        <div class="cert-badge-container">
+                            <span class="cert-badge elite">Elite</span>
+                            <div class="badge-sparkle"></div>
+                        </div>
+                        <h3>Cloud Computing</h3>
+                    </div>
+                    <p class="cert-issuer">NPTEL - IIT Madras</p>
+                    <div class="cert-score">
+                        <span class="score">89%</span>
+                        <span class="score-label">Consolidated Score</span>
+                        <div class="score-glow"></div>
+                    </div>
+                    <div class="cert-details">
+                        <span class="detail">Top 1%</span>
+                        <span class="detail">8,456 Candidates</span>
+                    </div>
+                    <div class="cert-glow"></div>
+                </div>
+
+                <div class="cert-card holographic-glass quantum-card" data-aos="fade-up" data-aos-delay="450">
+                    <div class="cert-header">
+                        <div class="cert-badge-container">
+                            <span class="cert-badge">Python Programming</span>
+                            <div class="badge-sparkle"></div>
+                        </div>
+                        <h3>CodeTantra Certification</h3>
+                    </div>
+                    <p class="cert-issuer">CodeTantra.com</p>
+                    <div class="cert-score">
+                        <span class="score">Completed</span>
+                        <span class="score-label">Course Completion</span>
+                        <div class="score-glow"></div>
+                    </div>
+                    <div class="cert-details">
+                        <span class="detail">Python Programming</span>
+                        <span class="detail">I Year II Sem</span>
+                    </div>
+                    <div class="cert-glow"></div>
+                </div>
+
+                <div class="cert-card achievement holographic-glass quantum-card" data-aos="fade-up" data-aos-delay="550">
+                    <div class="cert-header">
+                        <div class="cert-badge-container">
+                            <span class="cert-badge achievement">IBM Medal</span>
+                            <div class="badge-sparkle"></div>
+                        </div>
+                        <h3>Best AI Solution</h3>
+                    </div>
+                    <p class="cert-issuer">CodeSprint 2.0 Hackathon</p>
+                    <div class="cert-score">
+                        <span class="score">Winner</span>
+                        <span class="score-label">University Level</span>
+                        <div class="score-glow"></div>
+                    </div>
+                    <div class="cert-details">
+                        <span class="detail">IBM Kalasalingam Innovation Cell</span>
+                        <span class="detail">Competitive Environment</span>
+                    </div>
+                    <div class="cert-glow"></div>
+                </div>
+
+                <div class="cert-card publication holographic-glass quantum-card" data-aos="fade-up" data-aos-delay="650">
+                    <div class="cert-header">
+                        <div class="cert-badge-container">
+                            <span class="cert-badge publication">Springer</span>
+                            <div class="badge-sparkle"></div>
+                        </div>
+                        <h3>Real-Time Pose Estimation</h3>
+                    </div>
+                    <p class="cert-issuer">ICSDP 2024 Conference</p>
+                    <div class="cert-score">
+                        <span class="score">Published</span>
+                        <span class="score-label">Research Paper</span>
+                        <div class="score-glow"></div>
+                    </div>
+                    <div class="cert-details">
+                        <span class="detail">4th International Conference</span>
+                        <span class="detail">Signal & Data Processing</span>
+                    </div>
+                    <div class="cert-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <span>Professional Experience</span>
+                <div class="title-decoration">
+                    <div class="title-line"></div>
+                    <div class="title-dot"></div>
+                    <div class="title-line"></div>
+                </div>
+            </h2>
+            <div class="experience-timeline">
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="timeline-marker">
+                        <div class="marker-pulse"></div>
+                        <div class="marker-glow"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Technical Trainer</h3>
+                            <span class="company">Tap Academy</span>
+                            <span class="duration">2025 - Present</span>
+                        </div>
+                        <p class="timeline-description">
+                            Currently working as a Technical Trainer at Tap Academy, teaching and mentoring students 
+                            in modern web development technologies and best practices.
+                        </p>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">Teaching</span>
+                            <span class="tech-tag">Mentoring</span>
+                            <span class="tech-tag">Technical Training</span>
+                        </div>
+                        <div class="timeline-glow"></div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="150">
+                    <div class="timeline-marker">
+                        <div class="marker-pulse"></div>
+                        <div class="marker-glow"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Freelance AI Developer</h3>
+                            <span class="company">Deccan AI</span>
+                            <span class="duration">2024 - 2025</span>
+                        </div>
+                        <p class="timeline-description">
+                            Worked with a San Francisco-based company on AI and machine learning projects. 
+                            Built strong communication and problem-solving skills in real-world environments.
+                        </p>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">AI/ML</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Problem Solving</span>
+                        </div>
+                        <div class="timeline-glow"></div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="timeline-marker">
+                        <div class="marker-pulse"></div>
+                        <div class="marker-glow"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Freelance Data Analyst</h3>
+                            <span class="company">Outlier</span>
+                            <span class="duration">2023 - 2024</span>
+                        </div>
+                        <p class="timeline-description">
+                            Completed freelance projects focusing on data analysis and machine learning. 
+                            Gained practical experience in real-world problem-solving scenarios.
+                        </p>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">Data Analysis</span>
+                            <span class="tech-tag">Machine Learning</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                        <div class="timeline-glow"></div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="timeline-marker">
+                        <div class="marker-pulse"></div>
+                        <div class="marker-glow"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>AICTE Intern</h3>
+                            <span class="company">AICTE Internship Program</span>
+                            <span class="duration">2023</span>
+                        </div>
+                        <p class="timeline-description">
+                            Completed an AICTE internship gaining hands-on exposure to practical project development. 
+                            Worked on real-world applications and industry-standard practices.
+                        </p>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">Project Development</span>
+                            <span class="tech-tag">Industry Practices</span>
+                            <span class="tech-tag">Practical Skills</span>
+                        </div>
+                        <div class="timeline-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <span>Get In Touch</span>
+                <div class="title-decoration">
+                    <div class="title-line"></div>
+                    <div class="title-dot"></div>
+                    <div class="title-line"></div>
+                </div>
+            </h2>
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-header">
+                        <h3>Let's Connect!</h3>
+                        <div class="contact-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                    </div>
+                    <p>
+                        I'm always open to discussing new opportunities, interesting projects, 
+                        or just having a chat about technology and innovation.
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon-wrapper">
+                                <i class="fas fa-envelope"></i>
+                                <div class="icon-glow"></div>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:reddyhemanth694@gmail.com">reddyhemanth694@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon-wrapper">
+                                <i class="fas fa-phone"></i>
+                                <div class="icon-glow"></div>
+                            </div>  
+                            <div>
+                                <h4>Phone</h4>
+                                <a href="tel:+919346120095">+91 9346120095</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon-wrapper">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div class="icon-glow"></div>
+                            </div>
+                            <div>
+                                <h4>Location</h4>
+                                <span>Settipalli, Andhra Pradesh, India</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/reddyhemanth694" class="social-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin"></i>
+                            <div class="social-glow"></div>
+                        </a>
+                        <a href="https://github.com/hemanthreddyy98-hub" class="social-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i>
+                            <div class="social-glow"></div>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                            <div class="social-glow"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form" data-aos="fade-left">
+                    <div class="form-header">
+                        <h3>Send Message</h3>
+                        <div class="form-icon">
+                            <i class="fas fa-paper-plane"></i>
+                        </div>
+                    </div>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <div class="input-wrapper">
+                                <input type="text" id="name" name="name" placeholder="Your Name" required class="cosmic-input">
+                                <div class="input-glow"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-wrapper">
+                                <input type="email" id="email" name="email" placeholder="Your Email" required class="cosmic-input">
+                                <div class="input-glow"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-wrapper">
+                                <input type="text" id="subject" name="subject" placeholder="Subject" required class="cosmic-input">
+                                <div class="input-glow"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-wrapper">
+                                <textarea id="message" name="message" placeholder="Your Message" rows="5" required class="cosmic-input"></textarea>
+                                <div class="input-glow"></div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary cosmic-button">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                            <div class="btn-glow"></div>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- 🌌 COSMIC FOOTER - UNIVERSE LEVEL -->
+    <footer class="footer cosmic-footer holographic-glass">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 Hemanth Reddy Yerrapu Reddy. All rights reserved.</p>
+                    <div class="footer-decoration">
+                        <div class="footer-line"></div>
+                        <div class="footer-dot"></div>
+                        <div class="footer-line"></div>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-glow"></div>
+    </footer>
+
+    <!-- Award-Winning Portfolio Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="react-components.js"></script>
+    <script src="script.js"></script>
+    <script src="advanced-script.js"></script>
+    
+    <!-- Force CSS Refresh and Advanced Graphics Initialization -->
+    <script>
+        // Force CSS refresh
+        function refreshCSS() {
+            const links = document.querySelectorAll('link[rel="stylesheet"]');
+            links.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href.includes('styles.css') || href.includes('modern-styles.css')) {
+                    link.setAttribute('href', href.split('?')[0] + '?v=' + Date.now());
+                }
+            });
+        }
+        
+        // Initialize cosmic graphics
+        function initCosmicGraphics() {
+            // Add cosmic scroll reveal effect
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe all elements with scroll-reveal class
+            document.querySelectorAll('.scroll-reveal, .cosmic-scroll-reveal').forEach(el => {
+                observer.observe(el);
+            });
+            
+            // Add cosmic particle animation
+            const cosmicParticles = document.querySelectorAll('.cosmic-particle');
+            cosmicParticles.forEach((particle, index) => {
+                particle.style.animationDelay = `${index * 0.3}s`;
+                particle.style.animationDuration = `${8 + Math.random() * 8}s`;
+            });
+            
+            // Add cosmic navigation effects
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.add('cosmic-nav-link');
+            });
+            
+            // Add cosmic text effects to section titles
+            document.querySelectorAll('.section-title').forEach(title => {
+                title.classList.add('cosmic-text');
+            });
+            
+            console.log('🌌 COSMIC GRAPHICS INITIALIZED - UNIVERSE LEVEL POWER ACTIVATED! 🚀✨');
+        }
+
+        // Skills filter toggle
+        function initSkillsFilter() {
+            const buttons = document.querySelectorAll('.skills-filter-button');
+            const panels = document.querySelectorAll('.skills-panel');
+            buttons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    buttons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    const target = btn.getAttribute('data-panel');
+                    panels.forEach(p => p.classList.toggle('active', p.id === target));
+                });
+            });
+        }
+
+        // Hero tabs toggle
+        function initHeroTabs() {
+            const buttons = document.querySelectorAll('.tab-button');
+            const panels = document.querySelectorAll('.tab-panel');
+            buttons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const target = btn.getAttribute('data-panel');
+                    buttons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    panels.forEach(p => p.classList.toggle('active', p.id === target));
+                    buttons.forEach(b => b.setAttribute('aria-selected', b === btn ? 'true' : 'false'));
+                });
+            });
+        }
+
+        // Theme droplet toggle
+        function initDropletTheme() {
+            const btn = document.getElementById('themeDroplet');
+            if (!btn) return;
+            const saved = localStorage.getItem('portfolio-theme') || 'light';
+            document.documentElement.setAttribute('data-theme', saved);
+            btn.addEventListener('click', () => {
+                const current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+                const next = current === 'light' ? 'dark' : 'light';
+                document.documentElement.setAttribute('data-theme', next);
+                localStorage.setItem('portfolio-theme', next);
+            });
+        }
+        
+        // Run on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            initCosmicGraphics();
+            initSkillsFilter();
+            initHeroTabs();
+            initDropletTheme();
+        });
+        
+        // Force refresh on page load
+        window.addEventListener('load', () => {
+            refreshCSS();
+        });
+    </script>
+</body>
+</html>

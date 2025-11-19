@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Advanced Graphics</title>
+    <link rel="stylesheet" href="modern-styles.css?v=2.3">
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background: #1a1a1a;
+            color: white;
+        }
+        .debug-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .debug-section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #333;
+            border-radius: 5px;
+        }
+        .test-element {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #555;
+            border-radius: 5px;
+        }
+        .status {
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .status.success { background: #4CAF50; color: white; }
+        .status.error { background: #f44336; color: white; }
+        .status.warning { background: #ff9800; color: white; }
+    </style>
+</head>
+<body>
+    <div class="debug-container">
+        <h1>🔍 Advanced Graphics Debug</h1>
+        
+        <div class="debug-section">
+            <h2>CSS Loading Test</h2>
+            <div id="css-status" class="status">Checking...</div>
+        </div>
+
+        <div class="debug-section">
+            <h2>Particle System Test</h2>
+            <div class="particle-system" style="height: 100px; border: 1px solid #555;">
+                <div class="particle" style="top: 20%; left: 20%;"></div>
+                <div class="particle" style="top: 40%; left: 60%;"></div>
+                <div class="particle" style="top: 60%; left: 40%;"></div>
+            </div>
+            <div id="particle-status" class="status">Checking...</div>
+        </div>
+
+        <div class="debug-section">
+            <h2>Gradient Effects Test</h2>
+            <div class="test-element gradient-mesh" style="height: 50px;">
+                Gradient Mesh Background
+            </div>
+            <div id="gradient-status" class="status">Checking...</div>
+        </div>
+
+        <div class="debug-section">
+            <h2>Text Effects Test</h2>
+            <div class="test-element">
+                <h3 class="text-gradient">Gradient Text Test</h3>
+                <p class="text-glow">Glowing Text Test</p>
+            </div>
+            <div id="text-status" class="status">Checking...</div>
+        </div>
+
+        <div class="debug-section">
+            <h2>Button Effects Test</h2>
+            <button class="btn-advanced" style="background: #007bff; color: white; border: none; padding: 10px 20px; border-radius: 5px;">
+                Advanced Button
+            </button>
+            <div id="button-status" class="status">Checking...</div>
+        </div>
+
+        <div class="debug-section">
+            <h2>Card Effects Test</h2>
+            <div class="test-element project-card-advanced card-hover-3d" style="background: #333;">
+                3D Hover Card Test
+            </div>
+            <div id="card-status" class="status">Checking...</div>
+        </div>
+
+        <div class="debug-section">
+            <h2>Skill Bar Test</h2>
+            <div class="skill-bar skill-bar-advanced" style="height: 10px; background: #333;">
+                <div class="skill-progress skill-progress-advanced" style="width: 75%;"></div>
+            </div>
+            <div id="skill-status" class="status">Checking...</div>
+        </div>
+
+        <div class="debug-section">
+            <h2>Console Logs</h2>
+            <div id="console-output" style="background: #000; color: #0f0; padding: 10px; border-radius: 5px; font-family: monospace; height: 200px; overflow-y: auto;"></div>
+        </div>
+    </div>
+
+    <script>
+        function log(message) {
+            const consoleOutput = document.getElementById('console-output');
+            const timestamp = new Date().toLocaleTimeString();
+            consoleOutput.innerHTML += `[${timestamp}] ${message}\n`;
+            consoleOutput.scrollTop = consoleOutput.scrollHeight;
+            console.log(message);
+        }
+
+        function updateStatus(elementId, status, message) {
+            const element = document.getElementById(elementId);
+            element.className = `status ${status}`;
+            element.textContent = message;
+        }
+
+        function checkCSSLoading() {
+            const links = document.querySelectorAll('link[rel="stylesheet"]');
+            let modernStylesLoaded = false;
+            
+            links.forEach(link => {
+                if (link.href.includes('modern-styles.css')) {
+                    modernStylesLoaded = true;
+                }
+            });
+            
+            if (modernStylesLoaded) {
+                updateStatus('css-status', 'success', '✅ Modern CSS loaded successfully');
+                log('✅ Modern CSS file loaded');
+            } else {
+                updateStatus('css-status', 'error', '❌ Modern CSS not loaded');
+                log('❌ Modern CSS file not found');
+            }
+        }
+
+        function checkParticleSystem() {
+            const particles = document.querySelectorAll('.particle');
+            if (particles.length > 0) {
+                updateStatus('particle-status', 'success', `✅ ${particles.length} particles found`);
+                log(`✅ Particle system: ${particles.length} particles detected`);
+            } else {
+                updateStatus('particle-status', 'error', '❌ No particles found');
+                log('❌ Particle system not working');
+            }
+        }
+
+        function checkGradientEffects() {
+            const gradientElements = document.querySelectorAll('.gradient-mesh');
+            if (gradientElements.length > 0) {
+                updateStatus('gradient-status', 'success', '✅ Gradient effects applied');
+                log('✅ Gradient effects working');
+            } else {
+                updateStatus('gradient-status', 'error', '❌ Gradient effects not found');
+                log('❌ Gradient effects not working');
+            }
+        }
+
+        function checkTextEffects() {
+            const gradientText = document.querySelector('.text-gradient');
+            const glowText = document.querySelector('.text-glow');
+            
+            if (gradientText && glowText) {
+                updateStatus('text-status', 'success', '✅ Text effects applied');
+                log('✅ Text effects working');
+            } else {
+                updateStatus('text-status', 'error', '❌ Text effects not found');
+                log('❌ Text effects not working');
+            }
+        }
+
+        function checkButtonEffects() {
+            const buttons = document.querySelectorAll('.btn-advanced');
+            if (buttons.length > 0) {
+                updateStatus('button-status', 'success', '✅ Button effects applied');
+                log('✅ Button effects working');
+            } else {
+                updateStatus('button-status', 'error', '❌ Button effects not found');
+                log('❌ Button effects not working');
+            }
+        }
+
+        function checkCardEffects() {
+            const cards = document.querySelectorAll('.project-card-advanced, .card-hover-3d');
+            if (cards.length > 0) {
+                updateStatus('card-status', 'success', '✅ Card effects applied');
+                log('✅ Card effects working');
+            } else {
+                updateStatus('card-status', 'error', '❌ Card effects not found');
+                log('❌ Card effects not working');
+            }
+        }
+
+        function checkSkillBars() {
+            const skillBars = document.querySelectorAll('.skill-bar-advanced, .skill-progress-advanced');
+            if (skillBars.length > 0) {
+                updateStatus('skill-status', 'success', '✅ Skill bar effects applied');
+                log('✅ Skill bar effects working');
+            } else {
+                updateStatus('skill-status', 'error', '❌ Skill bar effects not found');
+                log('❌ Skill bar effects not working');
+            }
+        }
+
+        function runAllTests() {
+            log('🚀 Starting advanced graphics debug...');
+            
+            setTimeout(() => {
+                checkCSSLoading();
+            }, 100);
+            
+            setTimeout(() => {
+                checkParticleSystem();
+            }, 200);
+            
+            setTimeout(() => {
+                checkGradientEffects();
+            }, 300);
+            
+            setTimeout(() => {
+                checkTextEffects();
+            }, 400);
+            
+            setTimeout(() => {
+                checkButtonEffects();
+            }, 500);
+            
+            setTimeout(() => {
+                checkCardEffects();
+            }, 600);
+            
+            setTimeout(() => {
+                checkSkillBars();
+            }, 700);
+            
+            setTimeout(() => {
+                log('🎯 Debug complete! Check the status indicators above.');
+            }, 800);
+        }
+
+        // Run tests when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            log('📄 Page loaded, starting debug...');
+            runAllTests();
+        });
+
+        // Also run tests after a delay to ensure CSS is loaded
+        setTimeout(runAllTests, 1000);
+    </script>
+</body>
+</html>

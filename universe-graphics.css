@@ -1,0 +1,563 @@
+/* 🌌 UNIVERSE-LEVEL GRAPHICS - THE MOST POWERFUL VISUAL EFFECTS EVER CREATED */
+
+/* 🎨 Advanced CSS Custom Properties for Universe-Level Graphics */
+:root {
+  /* Cosmic Color Palette */
+  --cosmic-primary: #ff006e;
+  --cosmic-secondary: #8338ec;
+  --cosmic-accent: #3a86ff;
+  --cosmic-gold: #ffbe0b;
+  --cosmic-neon: #06ffa5;
+  --cosmic-purple: #7209b7;
+  --cosmic-pink: #f72585;
+  --cosmic-cyan: #4cc9f0;
+  --cosmic-orange: #ff6b35;
+  --cosmic-green: #06ffa5;
+  
+  /* Holographic Gradients */
+  --holographic-1: linear-gradient(45deg, #ff006e, #8338ec, #3a86ff, #06ffa5, #ffbe0b);
+  --holographic-2: linear-gradient(135deg, #f72585, #7209b7, #3a0ca3, #4361ee, #4cc9f0);
+  --holographic-3: linear-gradient(225deg, #ff006e, #ffbe0b, #06ffa5, #8338ec, #3a86ff);
+  --holographic-4: linear-gradient(315deg, #7209b7, #4cc9f0, #06ffa5, #ffbe0b, #ff006e);
+  
+  /* Quantum Animations */
+  --quantum-duration: 0.3s;
+  --quantum-easing: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --cosmic-duration: 0.6s;
+  --cosmic-easing: cubic-bezier(0.23, 1, 0.32, 1);
+  
+  /* Universe Effects */
+  --universe-blur: blur(20px);
+  --cosmic-shadow: 0 0 50px rgba(255, 0, 110, 0.5);
+  --neon-glow: 0 0 30px rgba(6, 255, 165, 0.8);
+  --holographic-shadow: 0 0 100px rgba(131, 56, 236, 0.6);
+}
+
+/* 🌟 COSMIC PARTICLE SYSTEM - ADVANCED */
+.cosmic-particle-system {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
+}
+
+.cosmic-particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: var(--holographic-1);
+  border-radius: 50%;
+  animation: cosmicFloat 8s ease-in-out infinite;
+  box-shadow: 0 0 10px currentColor;
+  filter: blur(0.5px);
+}
+
+.cosmic-particle:nth-child(odd) {
+  animation-duration: 12s;
+  animation-delay: -2s;
+  background: var(--holographic-2);
+  width: 4px;
+  height: 4px;
+}
+
+.cosmic-particle:nth-child(3n) {
+  animation-duration: 15s;
+  animation-delay: -4s;
+  background: var(--holographic-3);
+  width: 2px;
+  height: 2px;
+}
+
+.cosmic-particle:nth-child(4n) {
+  animation-duration: 10s;
+  animation-delay: -6s;
+  background: var(--holographic-4);
+  width: 5px;
+  height: 5px;
+}
+
+@keyframes cosmicFloat {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) rotate(0deg) scale(1);
+    opacity: 0.3;
+    filter: hue-rotate(0deg);
+  }
+  25% {
+    transform: translateY(-30px) translateX(15px) rotate(90deg) scale(1.2);
+    opacity: 0.8;
+    filter: hue-rotate(90deg);
+  }
+  50% {
+    transform: translateY(-60px) translateX(-20px) rotate(180deg) scale(0.8);
+    opacity: 1;
+    filter: hue-rotate(180deg);
+  }
+  75% {
+    transform: translateY(-30px) translateX(15px) rotate(270deg) scale(1.1);
+    opacity: 0.6;
+    filter: hue-rotate(270deg);
+  }
+}
+
+/* 🌌 COSMIC BACKGROUND EFFECTS */
+.cosmic-background {
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(255, 0, 110, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(131, 56, 236, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(6, 255, 165, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 60% 60%, rgba(255, 190, 11, 0.2) 0%, transparent 50%),
+    linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #533483 100%);
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+}
+
+.cosmic-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(255, 0, 110, 0.1) 10px,
+      rgba(255, 0, 110, 0.1) 20px
+    );
+  animation: cosmicGrid 20s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes cosmicGrid {
+  0% { transform: translateX(0) translateY(0); }
+  100% { transform: translateX(20px) translateY(20px); }
+}
+
+/* 🌟 HOLOGRAPHIC GLASS EFFECTS */
+.holographic-glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(30px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    0 0 50px rgba(255, 0, 110, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.holographic-glass::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.2), 
+    transparent);
+  transition: left 0.8s var(--cosmic-easing);
+}
+
+.holographic-glass:hover::before {
+  left: 100%;
+}
+
+.holographic-glass::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--holographic-1);
+  background-size: 400% 400%;
+  animation: holographicShift 8s ease infinite;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+@keyframes holographicShift {
+  0%, 100% { background-position: 0% 50%; }
+  25% { background-position: 100% 50%; }
+  50% { background-position: 100% 100%; }
+  75% { background-position: 0% 100%; }
+}
+
+/* 🚀 QUANTUM CARD EFFECTS */
+.quantum-card {
+  transform-style: preserve-3d;
+  transition: all 0.8s var(--cosmic-easing);
+  position: relative;
+  overflow: hidden;
+}
+
+.quantum-card:hover {
+  transform: rotateY(15deg) rotateX(10deg) translateZ(30px) scale(1.05);
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.4),
+    0 0 100px rgba(255, 0, 110, 0.3),
+    0 0 150px rgba(131, 56, 236, 0.2);
+}
+
+.quantum-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--holographic-2);
+  background-size: 200% 200%;
+  animation: quantumPulse 4s ease-in-out infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: inherit;
+}
+
+.quantum-card:hover::before {
+  opacity: 0.1;
+}
+
+@keyframes quantumPulse {
+  0%, 100% { 
+    background-position: 0% 50%;
+    transform: scale(1);
+  }
+  50% { 
+    background-position: 100% 50%;
+    transform: scale(1.1);
+  }
+}
+
+/* ⚡ COSMIC BUTTON EFFECTS */
+.cosmic-button {
+  position: relative;
+  overflow: hidden;
+  background: var(--holographic-1);
+  background-size: 300% 300%;
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.4s var(--cosmic-easing);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 5px 20px rgba(255, 0, 110, 0.3);
+}
+
+.cosmic-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+  border-radius: 50%;
+}
+
+.cosmic-button:hover::before {
+  width: 400px;
+  height: 400px;
+}
+
+.cosmic-button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 
+    0 15px 40px rgba(255, 0, 110, 0.4),
+    0 0 60px rgba(131, 56, 236, 0.3),
+    0 0 100px rgba(6, 255, 165, 0.2);
+  background-position: 100% 100%;
+}
+
+.cosmic-button:active {
+  transform: translateY(-1px) scale(1.02);
+}
+
+/* 🌈 COSMIC TEXT EFFECTS */
+.cosmic-text {
+  background: var(--holographic-1);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: cosmicTextShift 6s ease infinite;
+  font-weight: 900;
+  text-shadow: 0 0 30px rgba(255, 0, 110, 0.5);
+}
+
+@keyframes cosmicTextShift {
+  0%, 100% { background-position: 0% 50%; }
+  25% { background-position: 100% 50%; }
+  50% { background-position: 100% 100%; }
+  75% { background-position: 0% 100%; }
+}
+
+.neon-glow-text {
+  color: var(--cosmic-neon);
+  text-shadow: 
+    0 0 10px var(--cosmic-neon),
+    0 0 20px var(--cosmic-neon),
+    0 0 30px var(--cosmic-neon),
+    0 0 40px var(--cosmic-neon);
+  animation: neonPulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes neonPulse {
+  from { 
+    text-shadow: 
+      0 0 10px var(--cosmic-neon),
+      0 0 20px var(--cosmic-neon),
+      0 0 30px var(--cosmic-neon);
+  }
+  to { 
+    text-shadow: 
+      0 0 20px var(--cosmic-neon),
+      0 0 30px var(--cosmic-neon),
+      0 0 40px var(--cosmic-neon),
+      0 0 50px var(--cosmic-neon);
+  }
+}
+
+/* 🌟 COSMIC SKILL BARS */
+.cosmic-skill-bar {
+  position: relative;
+  height: 12px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.cosmic-skill-progress {
+  position: relative;
+  height: 100%;
+  background: var(--holographic-1);
+  background-size: 200% 200%;
+  border-radius: inherit;
+  transition: width 2s var(--cosmic-easing);
+  animation: cosmicSkillShift 4s ease infinite;
+}
+
+.cosmic-skill-progress::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.4), 
+    transparent);
+  animation: cosmicShimmer 2s ease-in-out infinite;
+}
+
+@keyframes cosmicSkillShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes cosmicShimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* 🌌 COSMIC NAVIGATION */
+.cosmic-nav-link {
+  position: relative;
+  transition: all 0.4s var(--cosmic-easing);
+  overflow: hidden;
+}
+
+.cosmic-nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: var(--holographic-1);
+  background-size: 200% 200%;
+  animation: cosmicNavShift 3s ease infinite;
+  transition: width 0.4s var(--cosmic-easing);
+}
+
+.cosmic-nav-link:hover::before {
+  width: 100%;
+}
+
+.cosmic-nav-link:hover {
+  color: var(--cosmic-neon);
+  text-shadow: 0 0 10px var(--cosmic-neon);
+  transform: translateY(-2px);
+}
+
+@keyframes cosmicNavShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* 🌟 COSMIC FORM INPUTS */
+.cosmic-input {
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 15px 20px;
+  transition: all 0.4s var(--cosmic-easing);
+  color: white;
+  font-size: 16px;
+}
+
+.cosmic-input:focus {
+  border-color: var(--cosmic-neon);
+  box-shadow: 
+    0 0 20px rgba(6, 255, 165, 0.3),
+    0 0 40px rgba(6, 255, 165, 0.1);
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.02);
+}
+
+.cosmic-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  transition: all 0.3s ease;
+}
+
+.cosmic-input:focus::placeholder {
+  transform: translateY(-10px);
+  opacity: 0;
+  color: var(--cosmic-neon);
+}
+
+/* 🌌 COSMIC LOADING ANIMATION */
+.cosmic-loader {
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.cosmic-loader::before,
+.cosmic-loader::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  animation: cosmicSpin 2s linear infinite;
+}
+
+.cosmic-loader::before {
+  width: 100%;
+  height: 100%;
+  background: conic-gradient(from 0deg, var(--cosmic-primary), var(--cosmic-secondary), var(--cosmic-accent), var(--cosmic-neon), var(--cosmic-primary));
+  animation: cosmicSpin 2s linear infinite;
+}
+
+.cosmic-loader::after {
+  width: 80%;
+  height: 80%;
+  background: conic-gradient(from 180deg, var(--cosmic-purple), var(--cosmic-pink), var(--cosmic-cyan), var(--cosmic-orange), var(--cosmic-purple));
+  top: 10%;
+  left: 10%;
+  animation: cosmicSpin 2s linear infinite reverse;
+}
+
+@keyframes cosmicSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* 🌟 COSMIC SCROLL EFFECTS */
+.cosmic-scroll-reveal {
+  opacity: 0;
+  transform: translateY(100px) scale(0.8);
+  transition: all 1s var(--cosmic-easing);
+}
+
+.cosmic-scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* 🌌 COSMIC FOOTER */
+.cosmic-footer {
+  position: relative;
+  overflow: hidden;
+}
+
+.cosmic-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--holographic-1);
+  background-size: 200% 200%;
+  animation: cosmicFooterShift 4s ease infinite;
+}
+
+@keyframes cosmicFooterShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* 🌟 RESPONSIVE COSMIC EFFECTS */
+@media (max-width: 768px) {
+  .cosmic-particle {
+    width: 2px;
+    height: 2px;
+  }
+  
+  .cosmic-button {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+  
+  .cosmic-text {
+    font-size: 24px;
+  }
+}
+
+/* 🌌 PERFORMANCE OPTIMIZATIONS */
+@media (prefers-reduced-motion: reduce) {
+  .cosmic-particle,
+  .cosmic-background::before,
+  .holographic-glass::after,
+  .quantum-card::before,
+  .cosmic-button,
+  .cosmic-text,
+  .neon-glow-text,
+  .cosmic-skill-progress,
+  .cosmic-nav-link::before,
+  .cosmic-loader {
+    animation: none;
+  }
+}
+
+/* 🌟 BROWSER SUPPORT FALLBACKS */
+@supports not (backdrop-filter: blur(30px)) {
+  .holographic-glass {
+    background: rgba(0, 0, 0, 0.8);
+  }
+}
+
+@supports not (background-clip: text) {
+  .cosmic-text {
+    background: none;
+    color: var(--cosmic-neon);
+  }
+}
